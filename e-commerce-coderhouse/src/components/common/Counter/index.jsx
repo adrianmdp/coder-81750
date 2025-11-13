@@ -14,11 +14,9 @@ const Counter = () => {
 
   return (
     <div>
-      <Button text="-" callback={restar} />
+      <Button callback={restar}>-</Button>
       <input type="text" value={num} />
-      <button style={{ backgroundColor: "gray" }} onClick={sumar}>
-        +
-      </button>
+      <Button callback={sumar}>+</Button>
     </div>
   );
 };
