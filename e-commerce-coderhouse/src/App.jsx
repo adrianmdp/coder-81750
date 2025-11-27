@@ -1,9 +1,17 @@
 import { useState } from "react";
+import { Routes, Route } from "react-router";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import Button from "./components/common/Button";
 import Home from "./pages/Home";
+import { Contact } from "./pages/Contact";
+import Users from "./pages/Users";
+import Todo from "./pages/Todo";
+import Nav from "./components/layout/Nav";
+import Header from "./components/layout/Header";
+import Footer from "./components/layout/Footer";
+import UserDetail from "./pages/UserDetail";
 
 function App() {
   const login = () => {
@@ -14,31 +22,35 @@ function App() {
     console.log("SignOut");
   };
 
-  const Contact = () => {
-    console.log("Contact");
-  };
-
   const saludo = "Saludo";
 
   return (
     <>
-      {/* <Header /> */}
-      {/* <Nav /> */}
+      <Header />
+      <Nav />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/users" element={<Users />} />
+        <Route path="/todo" element={<Todo />} />
+        <Route path="/users/:userId" element={<UserDetail />} />
 
-      <div>
-        {/* <Aside /> */}
-        <Home />
-      </div>
+        {/* <Route element={<AuthLayout />}> */}
+        {/* Rutas protegidas */}
+        {/* <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/credit-cards" element={<CreditCards />} /> */}
+        {/* </Route> */}
 
-      {/* <Footer /> */}
-
-      {/* Hola mundo
-      <br />
-      <label htmlFor=""></label>
-      <div className>{saludo}</div>
-      <Button text="Login" callback={() => login()} icon="puerta" />
-      <Button text="SignOut" callback={() => SignOut()} icon="x" />
-      <Button text="Contact" callback={() => Contact()} icon="sobre" /> */}
+        {/* Hola mundo
+        <br />
+        <label htmlFor=""></label>
+        <div className>{saludo}</div>
+        <Button text="Login" callback={() => login()} icon="puerta" />
+        <Button text="SignOut" callback={() => SignOut()} icon="x" />
+        <Button text="Contact" callback={() => Contact()} icon="sobre" /> */}
+      </Routes>
+      <Footer />
     </>
   );
 }

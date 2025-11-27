@@ -1,11 +1,13 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { obtenerUsuarios } from "../../services/users";
 
 const Contact = () => {
   const inputNameRef = useRef(null);
 
-  const onSubmit = () => {
+  const onSubmit = (e) => {
+    e.preventDefault();
     // Process
-    inputNameRef.current.focus();
+    // inputNameRef.current.focus();
   };
 
   return (
