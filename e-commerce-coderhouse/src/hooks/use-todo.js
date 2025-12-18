@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { obtenerTodo } from "../services/todos";
+import { obtenerTodo } from "../services/jsonplaceholder/todos";
 
 const todos = () => {
   const [num, setNum] = useState(0);

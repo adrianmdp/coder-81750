@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import { obtenerUsuariosJsonPlaceholder } from "../../services/users";
+import { obtenerUsuarios } from "../../services/jsonplaceholder/users";
 
 const Users = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    obtenerUsuariosJsonPlaceholder().then((resp) => {
+    obtenerUsuarios().then((resp) => {
       setUsers(resp);
     });
   }, []);
