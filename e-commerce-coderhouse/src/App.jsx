@@ -12,6 +12,7 @@ import Nav from "./components/layout/Nav";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import UserDetail from "./pages/UserDetail";
+import Register from "./pages/Auth/Register";
 
 function App() {
   const login = () => {
@@ -34,6 +35,7 @@ function App() {
         <Route path="/users" element={<Users />} />
         <Route path="/todo" element={<Todo />} />
         <Route path="/users/:userId" element={<UserDetail />} />
+        <Route path="/register" element={<Register />} />
 
         {/* <Route element={<AuthLayout />}> */}
         {/* Rutas protegidas */}
