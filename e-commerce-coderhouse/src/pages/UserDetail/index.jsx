@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { ClipLoader } from "react-spinners";
-import { obtenerUsuarioJsonPlaceholder } from "../../services/users";
+import { obtenerUsuario } from "../../services/jsonplaceholder/users";
 
 const override = {
   display: "block",
@@ -18,7 +18,7 @@ const UserDetail = () => {
   let [color, setColor] = useState("#ffffff");
 
   useEffect(() => {
-    obtenerUsuarioJsonPlaceholder(userId).then((resp) => {
+    obtenerUsuario(userId).then((resp) => {
       setUser(resp);
     });
   }, [userId]);

@@ -12,6 +12,9 @@ import Nav from "./components/layout/Nav";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import UserDetail from "./pages/UserDetail";
+import Vehicles from "./pages/Vehicles";
+import AddVehicle from "./pages/AddVehicle";
+import Login from "./pages/Auth/Login";
 
 function App() {
   const login = () => {
@@ -33,7 +36,10 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/users" element={<Users />} />
         <Route path="/todo" element={<Todo />} />
+        <Route path="/vehicles" element={<Vehicles />} />
+        <Route path="/add-vehicle" element={<AddVehicle />} />
         <Route path="/users/:userId" element={<UserDetail />} />
+        <Route path="/login" element={<Login />} />
 
         {/* <Route element={<AuthLayout />}> */}
         {/* Rutas protegidas */}
