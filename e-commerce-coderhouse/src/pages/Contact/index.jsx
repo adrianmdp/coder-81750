@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import { obtenerUsuarios } from "../../services/users";
 
 const Contact = () => {
   const inputNameRef = useRef(null);
